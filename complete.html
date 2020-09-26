@@ -137,7 +137,7 @@
             group1.layer.feature.properties.time = "1993";
             group2.layer.feature.properties.time = "1992";
 
-            var multiLayers = L.layerGroup([group1 {"time": "1993"}, group2 {"time": "1992"}]);
+            var multiLayers = L.layerGroup([group1, group2]);
 
             var sliderControl1 = L.control.sliderControl( {
                 layer: multiLayers,
