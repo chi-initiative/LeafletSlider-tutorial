@@ -5,7 +5,7 @@
 		"type": "Feature",
 		"geometry": {
 		    "type": "Point",
-		    "coordinates": [-122.34, 47.62]
+            "coordinates": [-119.1059976, 46.2649684]
 		},
 		"properties": {
 		    "title": "Popup 4",
