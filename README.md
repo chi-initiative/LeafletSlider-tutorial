@@ -53,7 +53,7 @@ In the `<body>`, add a div container, into which you'll be populating the map.
 
     <div id="map">If you can read this, either an error has occurred, or you're getting cute with the developer tools of your browser.</div>
 
-Still inside `<body>`, create a script block, for creating the map. Set its view however you'd like; or just use the one I've defaulted to. Load a tile layer with one of your choice; for instance, this example uses one from [OpenStreetMap.org](https://www.openstreetmap.org/){:target="_blank"}. It's also always a good idea to include the
+Still inside `<body>`, create a script block, for creating the map. Set its view however you'd like; or just use the one I've defaulted to. Load a tile layer with one of your choice; for instance, this example uses one from [OpenStreetMap.org](https://www.openstreetmap.org/). It's also always a good idea to include the
 
     <script>
         var map1 = L.map('myMap').setView([46.25,-119.17], 11);
