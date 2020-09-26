@@ -134,6 +134,7 @@
 
             var group1 = L.geoJSON(dataset1, optionsObject1);
             var marker1 = L.marker([40.75,-73.85], {time: '1991/02'});
+            marker1.addTo(group1);
             var sliderControl1 = L.control.sliderControl( {
                 layer: group1,
                 alwaysShowDate: true,
