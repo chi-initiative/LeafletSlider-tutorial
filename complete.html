@@ -18,7 +18,7 @@
                 margin: 0;
                 background-color: black;
             }
-        	#map {
+        	#myMap {
                 /*height: 100%;
                 width: 100%;*/
         		width: 800px;
@@ -37,7 +37,7 @@
     </head>
     <body>
         <!--Create the map div container-->
-        <div id="map">Test this text.</div>
+        <div id="myMap">Test this text.</div>
         <script>
             var dataset1 = [
                 {
@@ -117,10 +117,10 @@
         	    }
         	]
 
-        	var map = L.map('map').setView([46.25,-119.2], 11);
+        	var map1 = L.map('myMap').setView([46.25,-119.2], 11);
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            }).addTo(map);
+            }).addTo(map1);
 
             var optionsObject1 = {
                 onEachFeature: onEachFeature
@@ -132,6 +132,7 @@
 
             var group1 = L.geoJSON(dataset1, optionsObject1);
 
+            group1.addTo(map1);
 
         </script>
     </body>
