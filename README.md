@@ -82,10 +82,11 @@ After adding this code to your file, you can go to your repo's Settings tab, scr
 If the page loads with a map, then your HTML file is properly set up.
 
 ## Add resources for the plugin
-The Leaflet Time-Slider module is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts to your `<head>` section. One of these, the jquery UI script, is available via jquery's CDN:
+The Leaflet Time-Slider module is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts to your `<head>` section. One of these, the jquery UI script and stylesheet, is available via jquery's CDN:
 
 ```html
-<!--jquery UI-->
+<!--jQuery UI-->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 ```
 
@@ -127,7 +128,7 @@ var dataset1 = [
         properties: {
             title: 'Popup 2',
             description: 'Hello again, World!',
-            time: '1992/06'
+            time: '1992/07'
         }
     },
     {
@@ -139,7 +140,7 @@ var dataset1 = [
         properties: {
             title: 'Popup 3',
             description: 'Hello once again, World!',
-            time: '1992/07'
+            time: '1992/06'
         }
     }
 ];
@@ -177,7 +178,32 @@ Once GitHub updates with this most recent change, you can load your repo's websi
 
 To enable the slider, first delete the last line added:
 
+<code><s>group1.addTo(map1);</s></code>
+
+Instead, define the slider variable as the slider function. This example uses a number of set options (the full list of options can be found in the [module's GitHub repo README](https://github.com/Falke-Design/LeafletSlider#options)).
 
 ```javascript
-<s>group1.addTo(map1);</s>
+var sliderControl1 = L.control.sliderControl( {
+    layer: group1,
+    alwaysShowDate: true,
+    popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
+    showAllPopups: false, // to show all popups, instead of only one; same as the popup option "autoClose: false"
+    showPopups: true
+});
 ```
+
+The first option here, `layer` is required any time this function is used; it has been defined as the only group created so far. This setting turns each item in the group into its own layer. (See the tutorial below for how to set this option when controlling multiple groups in different layers, so that each group acts as its own layer.)
+
+The option `alwaysShowDate` controls whether or not the date for the current setting is displayed below the slider bar. `popupOptions` is a way to define the [options allowed for popups by Leaflet](https://leafletjs.com/reference-1.6.0.html#popup-l-popup). The `showAllPopups` option controls whether or not the current popup closes when another popup is opened; when set to "false", only one popup will be open at one time. And finally  ....
+
+Finally, add the slider to the map, then initialize it.
+
+```javascript
+// Add the slider to the map
+map1.addControl(sliderControl1);
+
+// Initialize the slider
+sliderControl1.startSlider();
+```
+
+After adding these two functions and your repo has updated, you can go to your repo's webpage to see the slider working.
