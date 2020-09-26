@@ -56,8 +56,11 @@ In the `<body>`, add a div container, into which you'll be populating the map.
 Still inside `<body>`, create a script block, for creating the map. Set its view however you'd like; or just use the one I've defaulted to. Load a tile layer with one of your choice; for instance, this example uses one from [OpenStreetMap.org](https://www.openstreetmap.org/). It's also always a good idea to include the
 
     <script>
+        // Create map (map1) inside div with #myMap ID; set the view
         var map1 = L.map('myMap').setView([46.25,-119.17], 11);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/hot/{z}/{x}/{y}.png', {
+
+        // Add tileLayer to map1
+        L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(map1);
     </script>
