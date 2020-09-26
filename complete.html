@@ -85,7 +85,7 @@
             		type: 'Feature',
             		geometry: {
             		    type: 'Point',
-            		    coordinates: [-122.34, 47.62]
+            		    coordinates: [-119.1059976, 46.2649684]
             		},
             		properties: {
             		    title: 'Popup 4',
@@ -97,7 +97,7 @@
             		type: 'Feature',
             		geometry: {
             		    type: 'Point',
-            		    coordinates: [-122.33, 47.61]
+            		    coordinates: [-119.2251354, 46.2844674]
             		},
             		properties: {
             		    title: 'Popup 5',
@@ -109,7 +109,7 @@
             		type: 'Feature',
             		geometry: {
             		    type: 'Point',
-            		    coordinates: [-122.33, 47.58]
+            		    coordinates: [-119.0918671, 46.2358944]
             		},
             		properties: {
             		    title: 'Popup 6',
@@ -117,8 +117,7 @@
             		    time: '1993/06'
             		}
         	    }
-        	]
-
+        	];
         	var map1 = L.map('myMap').setView([46.25,-119.2], 11);
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -133,15 +132,20 @@
             };
 
             var group1 = L.geoJSON(dataset1, optionsObject1);
-            var marker1 = L.marker([40.75,-73.85], {time: '1991/02'});
-            marker1.addTo(group1);
+            var group2 = L.geoJSON(dataset2, optionsObject1);
+
+            group1.setAttribute("time", "1992");
+            group2.setAttribute("time", "1993");
+
+            var multiLayers = L.layerGroup([group1, group2]);
+
             var sliderControl1 = L.control.sliderControl( {
-                layer: group1,
+                layer: multiLayers,
                 alwaysShowDate: true,
                 popupContent: 'Hello World', //Custom Popup content if marker has no popup
                 popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
                 showAllPopups: false, // to show all popups, instead of one, same as popup option "autoClose: false"
-            };
+            });
 
             // Add the slider to the map
             map1.addControl(sliderControl1);
