@@ -8,7 +8,7 @@ This is a tutorial repo to introduce people to using Leaflet Time-Slider plugin 
   * [Add popups](#add-popups)
   * [Enable the Slider](#enable-the-slider)
 
-<sup><a href="http://ecotrust-canada.github.io/markdown-toc/">*Table of contents generated with markdown-toc*</a></sup>
+<sub><a href="http://ecotrust-canada.github.io/markdown-toc/">*Table of contents generated with markdown-toc*</a></sub>
 
 ---
 
