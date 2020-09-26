@@ -41,44 +41,6 @@
         <!--Create the map div container-->
         <div id="myMap">Test this text.</div>
         <script>
-            var dataset1 = [
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-119.0977191, 46.2465524]
-                    },
-                    properties: {
-                        title: 'Popup 1',
-                        description: 'Hello World!',
-                        time: '1992/01'
-                    }
-                },
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-119.201977, 46.257038]
-                    },
-                    properties: {
-                        title: 'Popup 2',
-                        description: 'Hello again, World!',
-                        time: '1992/07'
-                    }
-                },
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-119.1080419, 46.2309332]
-                    },
-                    properties: {
-                        title: 'Popup 3',
-                        description: 'Hello once again, World!',
-                        time: '1992/06'
-                    }
-                }
-            ];
 
 /*            var dataset2 = [
         		{
@@ -127,6 +89,46 @@
 
 
             $.getJSON("data/popups.json", function(json) {
+
+                var dataset1 = [
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-119.0977191, 46.2465524]
+                        },
+                        properties: {
+                            title: 'Popup 1',
+                            description: 'Hello World!',
+                            time: '1992/01'
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-119.201977, 46.257038]
+                        },
+                        properties: {
+                            title: 'Popup 2',
+                            description: 'Hello again, World!',
+                            time: '1992/07'
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-119.1080419, 46.2309332]
+                        },
+                        properties: {
+                            title: 'Popup 3',
+                            description: 'Hello once again, World!',
+                            time: '1992/06'
+                        }
+                    }
+                ];
+
                 var optionsObject = {
                     onEachFeature: onEachFeature
                 };
