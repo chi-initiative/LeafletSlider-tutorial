@@ -134,8 +134,8 @@
 
 
             $.getJSON("data/popups.json", function(json) {
-                var group1 = L.geoJSON(dataset1, optionsObject);
                 var group2 = L.geoJSON(json, optionsObject);
+                var group1 = L.geoJSON(dataset1, optionsObject);
 
                 group1.options.time = "1993";
                 group2.options.time = "1992";
