@@ -132,7 +132,13 @@
 
             var group1 = L.geoJSON(dataset1, optionsObject1);
 
-            group1.addTo(map1);
+            var sliderControl1 = L.control.sliderControl( {
+                layer: group1,
+                alwaysShowDate: true,
+                popupContent: 'Hello World', //Custom Popup content if marker has no popup
+                popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
+                showAllPopups: false, // to show all popups, instead of one, same as popup option "autoClose: false"
+            });
 
         </script>
     </body>
