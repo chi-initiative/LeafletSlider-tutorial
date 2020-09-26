@@ -1,6 +1,16 @@
 # LeafletSlider-tutorial
 This is a tutorial repo to introduce people to using Leaflet Time-Slider plugin in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank html file.
 
+---
+- [LeafletSlider-tutorial](#leafletslider-tutorial)
+  * [Set up html file for map](#set-up-html-file-for-map)
+  * [Add resources for the plugin](#add-resources-for-the-plugin)
+  * [Add popups](#add-popups)
+  * [Enable the Slider](#enable-the-slider)
+
+<small><em><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></em></small>
+---
+
 ## Set up html file for map
 Begin by setting up your html file with the basic structure.
 
