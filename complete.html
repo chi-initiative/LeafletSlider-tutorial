@@ -124,16 +124,17 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(map1);
 
-            var optionsObject = {
-                onEachFeature: onEachFeature
-            };
-            function onEachFeature (feature, layer) {
-                var content = "<div style='clear: both'></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
-                layer.bindPopup(content, {closeButton: true});
-            };
 
 
             $.getJSON("data/popups.json", function(json) {
+                var optionsObject = {
+                    onEachFeature: onEachFeature
+                };
+                function onEachFeature (feature, layer) {
+                    var content = "<div style='clear: both'></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
+                    layer.bindPopup(content, {closeButton: true});
+                };
+
                 var group2 = L.geoJSON(json, optionsObject);
                 var group1 = L.geoJSON(dataset1, optionsObject);
 
