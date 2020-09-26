@@ -136,14 +136,14 @@
 
             $.getJSON("data/popups.json", function(json) {
                 group2 = L.geoJSON(json, optionsObject);
-            
-            group1.options.time = "1993";
-            group2.options.time = "1992";
 
-            var multiLayers = L.layerGroup([group1, group2]);
+//            group1.options.time = "1993";
+//            group2.options.time = "1992";
+
+//            var multiLayers = L.layerGroup([group1, group2]);
 
             var sliderControl1 = L.control.sliderControl( {
-                layer: multiLayers,
+                layer: group2,
                 alwaysShowDate: true,
                 popupContent: 'Hello World', //Custom Popup content if marker has no popup
                 popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
