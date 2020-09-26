@@ -132,10 +132,10 @@
                 layer.bindPopup(content, {closeButton: true});
             };
 
-            var group1 = L.geoJSON(dataset1, optionsObject1);
-            var group2 = L.geoJSON(dataset2, optionsObject1);
+            var group1 = L.geoJSON(dataset1, optionsObject1, {time: '1992'});
+            var group2 = L.geoJSON(dataset2, optionsObject1, {time: '1994'});
 
-            var multipleLayerGroups = L.layerGroup(group1 {time: '1992'}, group2 {time:'1994'});
+            var multipleLayerGroups = L.layerGroup(group1, group2);
 
             var sliderControl1 = L.control.sliderControl( {
                 layer: multipleLayerGroups,
