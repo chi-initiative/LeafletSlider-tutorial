@@ -1,0 +1,41 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-119.1059976, 46.2649684]
+            },
+            "properties": {
+                "title": "Popup 4",
+                "description": "Hello World, once more!",
+                "time": "1993/05"
+            }
+        },
+        {
+            "type": "Feature",
+            "geomtetry": {
+                "type": "Point",
+                "coordinates": [-119.2251354, 46.2844674]
+            },
+            "properties": {
+                "title": "Popup 5",
+                "description": "Hello World, tired yet?!",
+                "time": "1993/08"
+            }
+        },
+        {
+            "type": "Feature",
+            "geomtetry": {
+                "type": "Point",
+                "coordinates": [-119.0918671, 46.2358944]
+            },
+            "properties": {
+                "title": "Popup 6",
+                "description": "Last time: Hello World!"",
+                "time": "1993/06"
+            }
+        }
+    ]
+}

@@ -80,7 +80,7 @@
                 }
             ];
 
-            var dataset2 = [
+/*            var dataset2 = [
         		{
             		type: 'Feature',
             		geometry: {
@@ -118,12 +118,13 @@
             		}
         	    }
         	];
+*/            
         	var map1 = L.map('myMap').setView([46.25,-119.2], 11);
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(map1);
 
-            var optionsObject1 = {
+            var optionsObject = {
                 onEachFeature: onEachFeature
             };
             function onEachFeature (feature, layer) {
@@ -131,27 +132,30 @@
                 layer.bindPopup(content, {closeButton: true});
             };
 
-            var group1 = L.geoJSON(dataset1, optionsObject1);
-            var group2 = L.geoJSON(dataset2, optionsObject1);
+            var group1 = L.geoJSON(dataset1, optionsObject);
 
-            group1.options.time = "1993";
-            group2.options.time = "1992";
+            $.getJSON("data/popups.json", function(json) {
+                var group2 = L.geoJSON(json, optionsObject);
 
-            var multiLayers = L.layerGroup([group1, group2]);
+                group1.options.time = "1993";
+                group2.options.time = "1992";
 
-            var sliderControl1 = L.control.sliderControl( {
-                layer: multiLayers,
-                alwaysShowDate: true,
-                popupContent: 'Hello World', //Custom Popup content if marker has no popup
-                popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
-                showAllPopups: false, // to show all popups, instead of one, same as popup option "autoClose: false"
+                var multiLayers = L.layerGroup([group1, group2]);
+
+                var sliderControl1 = L.control.sliderControl( {
+                    layer: multiLayers,
+                    alwaysShowDate: true,
+                    popupContent: 'Hello World', //Custom Popup content if marker has no popup
+                    popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
+                    showAllPopups: false, // to show all popups, instead of one, same as popup option "autoClose: false"
+                });
+
+                // Add the slider to the map
+                map1.addControl(sliderControl1);
+
+                // Initialize the slider
+                sliderControl1.startSlider();
             });
-
-            // Add the slider to the map
-            map1.addControl(sliderControl1);
-
-            // Initialize the slider
-            sliderControl1.startSlider();
 
         </script>
     </body>
