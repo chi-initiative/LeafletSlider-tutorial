@@ -41,7 +41,7 @@
         <!--Create the map div container-->
         <div id="myMap">Test this text.</div>
         <script>
-/*            var dataset1 = [
+            var dataset1 = [
                 {
                     type: 'Feature',
                     geometry: {
@@ -79,7 +79,7 @@
                     }
                 }
             ];
-
+/*
             var dataset2 = [
         		{
             		type: 'Feature',
@@ -132,19 +132,19 @@
                 layer.bindPopup(content, {closeButton: true});
             };
 
-//            var group1 = L.geoJSON(dataset1, optionsObject);
+            var group1 = L.geoJSON(dataset1, optionsObject);
 //            var group2 = L.geoJSON();
 
             $.getJSON("data/popups.json", function(json) {
                 var group2 = L.geoJSON(json, optionsObject);
 
-//            group1.options.time = "1993";
-//            group2.options.time = "1992";
+            group1.options.time = "1993";
+            group2.options.time = "1992";
 
-//            var multiLayers = L.layerGroup([group1, group2]);
+            var multiLayers = L.layerGroup([group1, group2]);
 
             var sliderControl1 = L.control.sliderControl( {
-                layer: group2,
+                layer: multiLayers,
                 alwaysShowDate: true,
                 popupContent: 'Hello World', //Custom Popup content if marker has no popup
                 popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
