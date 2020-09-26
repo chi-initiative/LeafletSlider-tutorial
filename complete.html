@@ -7,7 +7,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
 <style>
 	#map {
-		width: 800px;
+        height: 100%;
+        width: 100%;
+		/*width: 800px;
         max-width: 100%;
         height: 450px;
         margin: 0;
@@ -15,7 +17,7 @@
         top: 50%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)*/
 	}
 </style>
 
@@ -23,9 +25,9 @@
 </head>
 <body>
 
-<div id="map"></div>
+<div id="map">Test this text.</div>
 <script>
-	var map = L.map('map').setView([41.8731903, -96.8420169], 5);
+	var map = L.map('map').setVie([41.8731903, -96.8420169], 5);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/pinchme123/ck9drsnx31e6i1irrq4mjb6u2/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGluY2htZTEyMyIsImEiOiJ6NGZtTlM4In0.OCmTeaW54vMm7nqoaXsnjQ', {
 		attribution: 'Map data &copy; <a href="http://mapbox.com">MapBox</a> | Navigation bar &copy <a href="http://getbootstrap.com/2.3.2/">Bootstrap</a>',
