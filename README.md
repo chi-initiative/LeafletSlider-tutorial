@@ -177,8 +177,7 @@ Once GitHub updates with this most recent change, you can load your repo's websi
 
 To enable the slider, first delete the last line added:
 
-<s>
+
 ```javascript
-group1.addTo(map1);
+<s>group1.addTo(map1);</s>
 ```
-</s>
