@@ -1,83 +1,138 @@
 <html lang="en">
-<head>
-<!--jquery js-->
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<!-- leaflet files -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-<style>
-    body {
-        margin: 0;
-        background-color: black;
-    }
-	#map {
-        height: 100%;
-        width: 100%;*/*
-		width: 800px;
-        max-width: 100%;
-        height: 450px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%)*/
-	}
-</style>
+    <head>
+        <!--jquery js-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-<title>LeafletSlider Tutorial</title>
-</head>
-<body>
+        <!--jquery UI-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 
-<div id="map">Test this text.</div>
-<script>
-	var map = L.map('map').setView([46.25,-119.2], 11);
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-	//L.tileLayer('https://api.mapbox.com/styles/v1/pinchme123/ck9drsnx31e6i1irrq4mjb6u2/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicGluY2htZTEyMyIsImEiOiJ6NGZtTlM4In0.OCmTeaW54vMm7nqoaXsnjQ', {
-//		attribution: 'Map data &copy; <a href="http://mapbox.com">MapBox</a> | Navigation bar &copy <a href="http://getbootstrap.com/2.3.2/">Bootstrap</a>',
-//		maxZoom: 18,
-//		minZoom: 4,
-//		tileSize: 512,
-//		zoomOffset: -1
-//	}).addTo(map);
+        <!-- leaflet files -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
 
-	var brianIcon = L.icon({
-		iconUrl: 'Brian.png',
-		shadowUrl: 'pin_shadow.png',
-		iconAnchor:[12, 41],
-		popupAnchor:[1, -34],
-		shadowSize:[41, 41]
-	})
+        <!--Leaflet Time-Slider module script;
+        find maintained version at https://github.com/Falke-Design/LeafletSlider-->
+        <script src="js/SliderControl.js"></script>
+        <style>
+            body {
+                margin: 0;
+                background-color: black;
+            }
+        	#map {
+                /*height: 100%;
+                width: 100%;*/
+        		width: 800px;
+                max-width: 100%;
+                height: 450px;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%)
+        	}
+        </style>
 
-	var beccaIcon = L.icon({
-		iconUrl: 'Rebecca.png',
-		shadowUrl: 'pin_shadow.png',
-		iconAnchor:[12, 41],
-		popupAnchor:[1, -34],
-		shadowSize:[41, 41]
-	})
+        <title>LeafletSlider Tutorial</title>
+    </head>
+    <body>
+        <!--Create the map div container-->
+        <div id="map">Test this text.</div>
+        <script>
+            var dataset1 = [
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-119.0977191, 46.2465524]
+                    },
+                    properties: {
+                        title: 'Popup 1',
+                        description: 'Hello World!',
+                        time: '1992/01'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-119.201977, -46.257038]
+                    },
+                    properties: {
+                        title: 'Popup 2',
+                        description: 'Hello again, World!',
+                        time: '1992/06'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-119.1080419, 46.2309332]
+                    },
+                    properties: {
+                        title: 'Popup 3',
+                        description: 'Hello once again, World!',
+                        time: '1992/07'
+                    }
+                }
+            ];
 
-	var jenniferIcon = L.icon({
-		iconUrl: 'Jennifer.png',
-		shadowUrl: 'pin_shadow.png',
-		iconAnchor:[12, 41],
-		popupAnchor:[1, -34],
-		shadowSize:[41, 41]
-	});
-	L.marker([41.921886, -83.422787], {icon:jenniferIcon}).addTo(map)
-    .bindPopup("<h4>Monroe, MI</h4> Jennifer's hometown is on the River Raisin. It's a small suburban town south of Detroit and north of Toledo, OH <br><br> <a href='http://en.wikipedia.org/wiki/Monroe,_Michigan'>Learn More</a>")
-    .closePopup();
+            var dataset2 = [
+        		{
+            		type: 'Feature',
+            		geometry: {
+            		    type: 'Point',
+            		    coordinates: [-122.34, 47.62]
+            		},
+            		properties: {
+            		    title: 'Popup 4',
+            		    description: 'Hello World, once more!',
+            		    time: '1993/05'
+            		}
+        	    },
+        	    {
+            		type: 'Feature',
+            		geometry: {
+            		    type: 'Point',
+            		    coordinates: [-122.33, 47.61]
+            		},
+            		properties: {
+            		    title: 'Popup 5',
+            		    description: 'Hello World, tired yet?!',
+            		    time: '1993/08'
+            		}
+        	    },
+        	    {
+            		type: 'Feature',
+            		geometry: {
+            		    type: 'Point',
+            		    coordinates: [-122.33, 47.58]
+            		},
+            		properties: {
+            		    title: 'Popup 6',
+            		    description: 'Last time: Hello World!',
+            		    time: '1993/06'
+            		}
+        	    }
+        	]
 
-	L.marker([46.893892, -96.780419], {icon:beccaIcon}).addTo(map)
-    .bindPopup("<h4>Fargo, ND</h4> Becca's hometown sits on the banks of the <a href= 'http://en.wikipedia.org/wiki/Red_River_of_the_North'>Red River</a>, across from its sister city, <a href='http://en.wikipedia.org/wiki/Moorhead,_Minnesota'>Moorhead, MN</a>. Fargo is the largest city in North Dakota.<br><br> <a href='http://en.wikipedia.org/wiki/Fargo,_North_Dakota'>Learn More</a>")
-    .closePopup();
+        	var map = L.map('map').setView([46.25,-119.2], 11);
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            }).addTo(map);
 
-	L.marker([46.257038, -119.201977], {icon: brianIcon}).addTo(map)
-    .bindPopup("<h4>Pasco, WA</h4> Brian's hometown is in eastern Washington on the breathtaking Columbia River, near the <a href='http://www.fws.gov/refuge/Hanford_Reach/'>Hanford Reach</a>. It is one of the three main cities that make up the Tri-Cities.<br><br><a href='http://en.wikipedia.org/wiki/Pasco,_Washington'>Learn More</a>")
-    .closePopup();
+            var optionsObject1 = {
+                onEachFeature: onEachFeature
+            };
+            function onEachFeature (feature, layer) {
+                var content = "<div style='clear: both'></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
+                layer.bindPopup(content, {closeButton: true});
+            }
 
-</script>
-</body>
+            var group1 = L.geoJSON(dataset1, optionsObject1);
+
+
+        </script>
+    </body>
 </html>
