@@ -134,10 +134,10 @@
             var group1 = L.geoJSON(dataset1, optionsObject1);
             var group2 = L.geoJSON(dataset2, optionsObject1);
 
-            group1["time"] = "1993";
-            group2["time"] = "1992";
+            group1.layer.feature.properties.time = "1993";
+            group2.layer.feature.properties.time = "1992";
 
-            var multiLayers = L.layerGroup([group1, group2]);
+            var multiLayers = L.layerGroup([group1 {"time": "1993"}, group2 {"time": "1992"}]);
 
             var sliderControl1 = L.control.sliderControl( {
                 layer: multiLayers,
