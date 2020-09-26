@@ -134,8 +134,8 @@
             var group1 = L.geoJSON(dataset1, optionsObject1);
             var group2 = L.geoJSON(dataset2, optionsObject1);
 
-            group1.setAttribute("time", "1992");
-            group2.setAttribute("time", "1993");
+            group1.time = "1992";
+            group2.time = "1993";
 
             var multiLayers = L.layerGroup([group1, group2]);
 
