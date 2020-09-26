@@ -155,10 +155,10 @@ var optionsObject1 = {
 function onEachFeature (feature, layer) {
     var content = "<div style='clear: both'></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
     layer.bindPopup(content, {closeButton: true});
-}
+};
 ```
 
-The second variable, `content`, describes which parts of the geoJSON data fits into which part of the popup that will be generated. Each popup is bound to each marker, added to the existing map as a new layer. When binding the popup, it also adds a close-popup button in its deault location (the top-right of the popup).
+The second variable, `content`, describes which parts of the geoJSON data fits into which part of the popup that will be generated. Each popup is bound to each marker, added to the existing map as a new layer. When binding the popup, it also adds a close-popup button in its default location (the top-right of the popup).
 
 Under where this has all been specified, add this new variable, which defines a group of geoJSON-defined markers and the associated popups, based upon the data.
 
