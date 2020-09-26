@@ -5,36 +5,36 @@
 		"type": "Feature",
 		"geometry": {
 		    "type": "Point",
-		    "coordinates": [-122.3, 47.6]
+		    "coordinates": [-122.34, 47.62]
 		},
 		"properties": {
-		    "title": "Popup 1",
-		    "description": "Hello World!",
-		    "time": "1992/01"
+		    "title": "Popup 4",
+		    "description": "Hello World, once more!",
+		    "time": "1993/05"
 		}
 	    },
 	    {
 		"type": "Feature",
 		"geometry": {
 		    "type": "Point",
-		    "coordinates": [-122.3, 47.58]
+		    "coordinates": [-122.33, 47.61]
 		},
 		"properties": {
-		    "title": "Popup 2",
-		    "description": "Hello again, World!",
-		    "time": "1992/06"
+		    "title": "Popup 5",
+		    "description": "Hello World, tired yet?!",
+		    "time": "1993/08"
 		}
 	    },
 	    {
 		"type": "Feature",
 		"geometry": {
 		    "type": "Point",
-		    "coordinates": [-122.32, 47.59]
+		    "coordinates": [-122.33, 47.58]
 		},
 		"properties": {
-		    "title": "Popup 3",
-		    "description": "Hello once again, World!",
-		    "time": "1992/07"
+		    "title": "Popup 6",
+		    "description": "Last time: Hello World!",
+		    "time": "1993/06"
 		}
 	    }
     ]
