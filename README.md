@@ -253,7 +253,7 @@ var sliderControl1 = L.control.sliderControl( {;
 
 The first two lines set the "time" option for each geoJSON layer, so that Time-Slider has the required "time" attribute to work upon. The final line creates the `layerGroup` with both geoJSON layers; to add more geoJSON layers, first create them via one of the two methods above, set their "time" option, then add them to this list.
 
-Finally, when you added the line `$.getJSON("data/popups.json", function(json) {`, it required putting the rest of the `<script>` contents below it inside of this function. So this means you'll need to go to the last line of the `script>` to close the curl bracket and the parentheses:
+Finally, when you added the line `$.getJSON("data/popups.json", function(json) {`, it required putting the rest of the `<script>` contents below it inside of this function. So this means you'll need to go to the last line of the `<script>` to close the curl bracket and the parentheses:
 
 ```html
     sliderControl1.startSlider();
