@@ -16,7 +16,7 @@ This is a tutorial repo to introduce people to using Leaflet Time-Slider plugin 
 ## Set up html file for map
 Begin by setting up your html file with the basic structure.
 
-```html
+```js
 <html lang="en">
     <head>
 
