@@ -6,7 +6,7 @@ This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), 
 * [Add resources for the plugin](#add-resources-for-the-plugin)
 * [Add popups](#add-popups)
 * [Enable the Slider](#enable-the-slider)
-* [Control multiple markers simultaneously in the multiple groups](#control-multiple-markers-simultaneously-in-the-multiple-groups)
+* [Control multiple markers simultaneously in multiple groups](#control-multiple-markers-simultaneously-in-multiple-groups)
 
 <sub><a href="http://ecotrust-canada.github.io/markdown-toc/">*Table of contents generated with markdown-toc*</a></sub>
 
@@ -93,7 +93,7 @@ After adding this code to your file, you can go to your repo's Settings tab, scr
 If the page loads with a map, then your HTML file is properly set up.
 
 ## Add resources for the plugin
-The Leaflet Time-Slider module is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts to your `<head>` section. One of these, the jquery UI script and stylesheet, is available via jquery's CDN:
+The Leaflet Time-Slider plugin is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts to your `<head>` section. One of these, the jquery UI script and stylesheet, is available via jquery's CDN:
 
 ```html
 <!--jQuery UI files-->
@@ -103,16 +103,16 @@ The Leaflet Time-Slider module is meant to control the display of markers, one a
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 ```
 
-You'll also need to add the module's locally-saved JS script, which is inside the "js" folder.
+You'll also need to add the plugin's locally-saved JS script, which is inside the "js" folder.
 
 ```html
-<!--Leaflet Time-Slider module js;
+<!--Leaflet Time-Slider plugin js;
 find maintained version at https://github.com/Falke-Design/LeafletSlider-->
 <script src="js/SliderControl.js"></script>
 ```
 
 ## Add popups
-Adding a few popups directly within the html file will serve as a basic example of how this module works.
+Adding a few popups directly within the html file will serve as a basic example of how this plugin works.
 
 Begin with a list of a few markers, added as a set of geoJSON-styled data. As a reminder, geoJSON files put the longitude first and latitude second as the coordinates, so these are reversed from how they are usually read.
 
@@ -208,7 +208,7 @@ The first option here, `layer` is required any time the `sliderControl` function
 
 The option `alwaysShowDate` controls whether or not the date for the current setting is displayed below the slider bar. The `showAllPopups` option controls whether or not the current popup closes when another popup is opened; when set to "false", only one popup will be open at one time. And finally, `showPopups` controls whether or not the popup for any given marker is automatically open when the slider generates that marker. When set to "false", you must click on the popup to view its content.
 
-You can view the other available options in the [module's GitHub repo README](https://github.com/Falke-Design/LeafletSlider#options).
+You can view the other available options in the [plugin's GitHub repo README](https://github.com/Falke-Design/LeafletSlider#options).
 
 Lastly, once you've configured `sliderControl` however you wish, add the slider to the map and then initialize it.
 
@@ -220,12 +220,12 @@ map1.addControl(sliderControl1);
 sliderControl1.startSlider();
 ```
 
-After adding these two functions, and your repo has updated online, you can go to your repo's webpage to see the slider in action. If you noticed before, the `time` values in each geoJSON entry are not in chronological order – the second and third entries are flipped, chronologically. This is to show that this module automatically reorders entries by default.
+After adding these two functions, and your repo has updated online, you can go to your repo's webpage to see the slider in action. If you noticed before, the `time` values in each geoJSON entry are not in chronological order – the second and third entries are flipped, chronologically. This is to show that this plugin automatically reorders entries by default.
 
-## Control multiple markers simultaneously in the multiple groups
-The way the Time-Slider module works, it creates a new layer for each marker in the geoJSON layer, then uses the slider to control the display of those individual layers. This means it is also possible to create a new `groupLayer` – which is its own specific thing for Leaflet – that contains each geoJSON collection of markers. Then, the module turns each collection into a controllable individual layer, rather than each marker separately.
+## Control multiple markers simultaneously in multiple groups
+The way the Time-Slider plugin works, it creates a new layer for each marker in the geoJSON layer, then uses the slider to control the display of those individual layers. This means it is also possible to create a new `groupLayer` – which is its own specific thing for Leaflet – that contains each geoJSON collection of markers. Then, the plugin turns each collection into a controllable individual layer, rather than each marker separately.
 
-Doing this requires a few additional steps in the `<script>`, but this tutorial will go even further to show how to create a geoJSON layer by importing data from an external geoJSON file. Then it'll show how to take the two geoJSON layers and put them into a single `groupLayer`, which the module can then control.
+Doing this requires a few additional steps in the `<script>`, but this tutorial will go even further to show how to create a geoJSON layer by importing data from an external geoJSON file. Then it'll show how to take the two geoJSON layers and put them into a single `groupLayer`, which the plugin can then control.
 
 This tutorial includes a sample `.json` file, inside of the "data" folder. Start by copying the middle two lines into your code, in between the lines shown:
 
@@ -238,7 +238,7 @@ $.getJSON("data/popups.json", function(json) {
 var sliderControl1 = L.control.sliderControl( {;
 ```
 
-Leaflet comes with the ability to import external geoJSON data; to use other forms of data, consider looking at the [leaflet-omnivore module](https://github.com/mapbox/leaflet-omnivore). The first line added uses the built-in capability to grab the geoJSON data. The second creates the second geoJSON layer and populates it with the external data, by using the same popup-writing function used before. If your geoJSON data has a different structure, you can write a different function for going over that different structure and write the popups.
+Leaflet comes with the ability to import external geoJSON data; to use other forms of data, consider looking at the [leaflet-omnivore plugin](https://github.com/mapbox/leaflet-omnivore). The first line added uses the built-in capability to grab the geoJSON data. The second creates the second geoJSON layer and populates it with the external data, by using the same popup-writing function used before. If your geoJSON data has a different structure, you can write a different function for going over that different structure and write the popups.
 
 After adding those lines, add the following middle three, again in between the top and bottom lines shown:
 
