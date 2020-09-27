@@ -1,5 +1,5 @@
 # LeafletSlider-tutorial
-This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using the [Leaflet Time-Slider plugin](https://github.com/Falke-Design/LeafletSlider) in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://geyerbri.github.io/LeafletSlider-tutorial/complete.html).
+This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using the [Leaflet Time-Slider plugin](https://github.com/Falke-Design/LeafletSlider) in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://chi-initiative.github.io/LeafletSlider-tutorial/complete.html).
 
 ---
 * [Set up html file for map](#set-up-html-file-for-map)
