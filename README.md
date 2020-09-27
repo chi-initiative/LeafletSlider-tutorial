@@ -1,5 +1,5 @@
 # LeafletSlider-tutorial
-This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using Leaflet Time-Slider plugin in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://geyerbri.github.io/LeafletSlider-tutorial/complete.html).
+This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using the [Leaflet Time-Slider plugin](https://github.com/Falke-Design/LeafletSlider) in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://geyerbri.github.io/LeafletSlider-tutorial/complete.html).
 
 ---
 - [LeafletSlider-tutorial](#leafletslider-tutorial)
@@ -264,3 +264,6 @@ Finally, when you added the line `$.getJSON("data/popups.json", function(json) {
 ```
 
 Once you've done all this, and your repo has been updated, you can once again go to your repo's webpage to see the slider in action. This time, it will display a number of markers simultaneously, then moving the slider will display the next set.
+
+---
+[Back to top](#leafletslider-tutorial)
