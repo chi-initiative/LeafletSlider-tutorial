@@ -2,12 +2,11 @@
 This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using the [Leaflet Time-Slider plugin](https://github.com/Falke-Design/LeafletSlider) in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://geyerbri.github.io/LeafletSlider-tutorial/complete.html).
 
 ---
-- [LeafletSlider-tutorial](#leafletslider-tutorial)
-  * [Set up html file for map](#set-up-html-file-for-map)
-  * [Add resources for the plugin](#add-resources-for-the-plugin)
-  * [Add popups](#add-popups)
-  * [Enable the Slider](#enable-the-slider)
-  * [Control multiple markers simultaneously in the multiple groups](#control-multiple-markers-simultaneously-in-the-multiple-groups)
+* [Set up html file for map](#set-up-html-file-for-map)
+* [Add resources for the plugin](#add-resources-for-the-plugin)
+* [Add popups](#add-popups)
+* [Enable the Slider](#enable-the-slider)
+* [Control multiple markers simultaneously in the multiple groups](#control-multiple-markers-simultaneously-in-the-multiple-groups)
 
 <sub><a href="http://ecotrust-canada.github.io/markdown-toc/">*Table of contents generated with markdown-toc*</a></sub>
 
