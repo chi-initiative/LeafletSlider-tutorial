@@ -41,6 +41,8 @@
         <!--Create the map div container-->
         <div id="myMap">Test this text.</div>
         <script>
+
+            // Start with geoJSON data
             var dataset1 = [
                 {
                     type: 'Feature',
@@ -79,51 +81,14 @@
                     }
                 }
             ];
-/*
-            var dataset2 = [
-        		{
-            		type: 'Feature',
-            		geometry: {
-            		    type: 'Point',
-            		    coordinates: [-119.1059976, 46.2649684]
-            		},
-            		properties: {
-            		    title: 'Popup 4',
-            		    description: 'Hello World, once more!',
-            		    time: '1993/05'
-            		}
-        	    },
-        	    {
-            		type: 'Feature',
-            		geometry: {
-            		    type: 'Point',
-            		    coordinates: [-119.2251354, 46.2844674]
-            		},
-            		properties: {
-            		    title: 'Popup 5',
-            		    description: 'Hello World, tired yet?!',
-            		    time: '1993/08'
-            		}
-        	    },
-        	    {
-            		type: 'Feature',
-            		geometry: {
-            		    type: 'Point',
-            		    coordinates: [-119.0918671, 46.2358944]
-            		},
-            		properties: {
-            		    title: 'Popup 6',
-            		    description: 'Last time: Hello World!',
-            		    time: '1993/06'
-            		}
-        	    }
-        	];
-*/
+
+            // Generate the map and set its initial view
         	var map1 = L.map('myMap').setView([46.25,-119.2], 11);
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(map1);
 
+            // Write up the functions for using the geoJSON data to produce popups for each marker
             var optionsObject = {
                 onEachFeature: onEachFeature
             };
@@ -132,22 +97,24 @@
                 layer.bindPopup(content, {closeButton: true});
             };
 
+            // Create the first geoJSON layer
             var group1 = L.geoJSON(dataset1, optionsObject);
-//            var group2 = L.geoJSON();
 
+            // Create the second geoJSON layer from external file
             $.getJSON("data/popups.json", function(json) {
                 var group2 = L.geoJSON(json, optionsObject);
 
-            group1.options.time = "1993";
-            group2.options.time = "1992";
+            // Set the time attribute for each group
+            group1.options.time = "1992";
+            group2.options.time = "1993";
 
+            // Create the layerGroup
             var multiLayers = L.layerGroup([group1, group2]);
 
+            // Set the sliderControl options
             var sliderControl1 = L.control.sliderControl( {
-                layer: multiLayers,
+                layer: multiLayers, //REQUIRED
                 alwaysShowDate: true,
-                popupContent: 'Hello World', //Custom Popup content if marker has no popup
-                popupOptions: {closeOnClick: false}, //Popup options for markers with no default popup
                 showAllPopups: false, // to show all popups, instead of one, same as popup option "autoClose: false"
             });
 
