@@ -159,7 +159,7 @@ var dataset1 = [
 ];
 ```
 
-After copying in this geoJSON-formatted data, you'll need create a new variable, which will define the popup structure that will be attached to each marker (via a second variable). This code will reference different parts of the "properties" spelled out in the data. It needs to be added *below* the geoJSON data, map, and tile layer portions of the code:
+After copying in this geoJSON-formatted data, you'll need create a new variable `optionsObject`, which will define via a function the popup structure that will be attached to each marker (via a second variable, explained below). This code will reference different parts of the "properties" spelled out in the data. It needs to be added *below* the geoJSON data, map, and tile layer portions of the code:
 
 ```js
 var optionsObject = {
