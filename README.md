@@ -97,15 +97,17 @@ If the page loads with a map, then your HTML file is properly set up.
 The Leaflet Time-Slider module is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts to your `<head>` section. One of these, the jquery UI script and stylesheet, is available via jquery's CDN:
 
 ```html
-<!--jQuery UI-->
+<!--jQuery UI files-->
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+<!--jQuery UI Touch js, required for touchscreen use-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 ```
 
 You'll also need to add the module's locally-saved JS script, which is inside the "js" folder.
 
 ```html
-<!--Leaflet Time-Slider module script;
+<!--Leaflet Time-Slider module js;
 find maintained version at https://github.com/Falke-Design/LeafletSlider-->
 <script src="js/SliderControl.js"></script>
 ```
