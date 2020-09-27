@@ -1,5 +1,5 @@
 # LeafletSlider-tutorial
-This is a tutorial repo to introduce people to using Leaflet Time-Slider plugin in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank html file.
+This is a tutorial repo to introduce people to using Leaflet Time-Slider plugin in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank html file. Once completed, your map will look like [this example map](https://geyerbri.github.io/LeafletSlider-tutorial/complete.html).
 
 ---
 - [LeafletSlider-tutorial](#leafletslider-tutorial)
@@ -80,7 +80,7 @@ Still inside `<body>`, create a script block, for creating the map. Set its view
 ```html
 <script >
     // Create map (map1) inside div with #myMap ID; set the view
-    var map1 = L.map('myMap').setView([46.25,-119.17], 11);
+    var map1 = L.map('myMap').setView([46.26,-119.15], 12);
 
     // Add tileLayer to map1
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -237,7 +237,7 @@ $.getJSON("data/popups.json", function(json) {
 var sliderControl1 = L.control.sliderControl( {;
 ```
 
-Leaflet comes with the ability to import external geoJSON data; to use other forms of data, consider looking at the [leaflet-omnivore module](https://github.com/mapbox/leaflet-omnivore).
+Leaflet comes with the ability to import external geoJSON data; to use other forms of data, consider looking at the [leaflet-omnivore module](https://github.com/mapbox/leaflet-omnivore). The first line added uses the built-in capability to grab the geoJSON data. The second creates the second geoJSON layer and populates it with the external data, by using the same popup-writing function used before. If your geoJSON data has a different structure, you can write a different function for going over that different structure and write the popups.
 
 After adding those lines, add the following middle three, again in between the top and bottom lines shown:
 
