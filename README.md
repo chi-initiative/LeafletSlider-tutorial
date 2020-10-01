@@ -277,7 +277,7 @@ Finally, when you added the line `$.getJSON("data/popups.json", function(json) {
 </script>
 ```
 
-(If creating the second dataset within the `<script>`, rather than via the external JSON file, do not do this last step of adding the closing curl bracket, perntheses, and semicolon.)
+(If adding the second dataset within the `<script>`, rather than via the external JSON file, do not do this last step of adding the closing curl bracket, perntheses, and semicolon.)
 
 Once you've done all this, and your repo has been updated, you can once again go to your repo's webpage to see the slider in action. This time, it will display a number of markers simultaneously, then moving the slider will display the next set.
 
