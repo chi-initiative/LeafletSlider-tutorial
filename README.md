@@ -93,7 +93,7 @@ After adding this code to your file, you can go to your repo's Settings tab, scr
 If the page loads with a map, then your HTML file is properly set up.
 
 ## Add resources for the plugin
-The Leaflet Time-Slider plugin is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts to your `<head>` section. One of these, the jquery UI script and stylesheet, is available via jquery's CDN:
+The Leaflet Time-Slider plugin is meant to control the display of markers, one at a time, via sliding control. To accomplish this requires adding additional JS scripts and a stylesheet to your `<head>` section. The first set of these, the jquery UI script and stylesheet, is available via jquery's CDN:
 
 ```html
 <!--jQuery UI files-->
