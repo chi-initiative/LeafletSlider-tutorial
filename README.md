@@ -4,6 +4,8 @@ This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), 
 NOTE: This tutorial links to my fork of the Leaflet Time-Slider plugin because, as of October 2020, neither the [original repo](https://github.com/dwilhelm89/LeafletSlider) nor the [Falke-Design-managed fork](https://github.com/Falke-Design/LeafletSlider) are being actively updated with fixes and improvements.
 
 ---
+## Table of Contents
+
 * [Set up html file for map](#set-up-html-file-for-map)
 * [Add resources for the plugin](#add-resources-for-the-plugin)
 * [Add popups](#add-popups)
