@@ -1,5 +1,7 @@
 # LeafletSlider-tutorial
-This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using the [Leaflet Time-Slider plugin](https://github.com/Falke-Design/LeafletSlider) in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://chi-initiative.github.io/LeafletSlider-tutorial/complete.html).
+This is a tutorial repo, written by [Brian Geyer](https://github.com/geyerbri), to introduce people to using the [Leaflet Time-Slider plugin](https://github.com/geyerbri/LeafletSlider) in a Leaflet map. Fork this repo and then work through this tutorial by writing into the blank index.html file. Once completed, your map will look like [this example map](https://chi-initiative.github.io/LeafletSlider-tutorial/complete.html).
+
+NOTE: This tutorial links to my fork of the Leaflet Time-Slider plugin because, as of October 2020, neither the [original repo](https://github.com/dwilhelm89/LeafletSlider) nor the [Falke-Design-managed fork](https://github.com/Falke-Design/LeafletSlider) are being actively updated with fixes and improvements.
 
 ---
 * [Set up html file for map](#set-up-html-file-for-map)
@@ -107,7 +109,7 @@ You'll also need to add the plugin's locally-saved JS script, which is inside th
 
 ```html
 <!--Leaflet Time-Slider plugin js;
-find maintained version at https://github.com/Falke-Design/LeafletSlider-->
+find maintained version at https://github.com/geyerbri/LeafletSlider-->
 <script src="js/SliderControl.js"></script>
 ```
 
@@ -208,7 +210,7 @@ The first option here, `layer` is required any time the `sliderControl` function
 
 The option `alwaysShowDate` controls whether or not the date for the current setting is displayed below the slider bar. The `showAllPopups` option controls whether or not the current popup closes when another popup is opened; when set to "false", only one popup will be open at one time. And finally, `showPopups` controls whether or not the popup for any given marker is automatically open when the slider generates that marker. When set to "false", you must click on the popup to view its content.
 
-You can view the other available options in the [plugin's GitHub repo README](https://github.com/Falke-Design/LeafletSlider#options).
+You can view the other available options in the [plugin's GitHub repo README](https://github.com/geyerbri/LeafletSlider#options).
 
 Lastly, once you've configured `sliderControl` however you wish, add the slider to the map and then initialize it.
 
