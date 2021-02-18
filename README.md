@@ -92,6 +92,8 @@ Still inside `<body>`, create a script block, for creating the map. Set its view
 </script>
 ```
 
+> Note: OpenStreetMap provides tilesets for small projects and light use; their [Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/) calls thies "marginal" and specifically forbids "heavy use." The linked usage policy includes resources for finding a suitable tileset for heavy use cases, or for creating one's own server to host the OpenStreetMaps data and use it for such cases.
+
 After adding this code to your file, you can go to your repo's Settings tab, scroll down to the GitHub Pages section, choose "master" from the Sources dropdown list, and click "Save." Keep refreshing the page until this same section has a green bar with the text, "Your site is published at..." You can click on this link to view your page, with the map loaded. If you go to this link and the only thing that loads is the text, "If you can read this, either an error has occurred, or you're getting cute with the developer tools of your browser", then go back through these first few steps to confirm you have closely followed them.
 
 If the page loads with a map, then your HTML file is properly set up.
