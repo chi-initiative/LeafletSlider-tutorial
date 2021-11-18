@@ -8,6 +8,12 @@
             <style>
                 #myMap {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
             </style>
+        <!--jQuery UI files-->
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <!--jQuery UI Touch js, required for touchscreen use-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+            <script src="js/SliderControl.js"></script>
     </head>
     <body>
         <div id="myMap"<>/div>
@@ -17,6 +23,104 @@
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
            }).addTo(map1);
+            var dataset1 = [
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.5077828, 42.7363966]
+                    },
+                    properties: {
+                        title: 'Popup 1',
+                        description: 'Frandor Deli',
+                        time: ''
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.59952, 42.7685577]
+                    },
+                    properties: {
+                        title: 'Popup 2',
+                        description: 'Mijos Diner',
+                        time: ''
+                    }
+                },
+                 {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.6437748, 42.6833809]
+                    },
+                    properties: {
+                        title: 'Popup 3',
+                        description: 'Fireside Grill',
+                        time: ''
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.5385392, 42.7233794]
+                    },
+                    properties: {
+                        title: 'Popup 4',
+                        description: 'The Brunch House',
+                        time: ''
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.6297554, 42.7425355]
+                    },
+                    properties: {
+                        title: 'Popup 5',
+                        description: 'Houlihans',
+                        time: ''
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.51713078887094, 42.76310327526277]
+                    },
+                    properties: {
+                        title: 'Popup 6',
+                        description: 'Claddagh Irish Pub',
+                        time: ''
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-84.51729564654282, 42.76700513349884]
+                    },
+                    properties: {
+                        title: 'Popup 7',
+                        description: 'Cantina',
+                        time: ''
+                    }
+                }
+                            ];
+            var optionsObject = {
+                onEachFeature: onEachFeature
+            };
+            function onEachFeature (feature, layer) {
+               var content = "<div style='clear: both'></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
+               layer.bindPopup(content, {closeButton: true});
+            };
+            var group1 = L.geoJSON(dataset1, optionsObject);
+            group1.addTo(map1);
+                
+                    
+       
         </script>
 
     </body>
