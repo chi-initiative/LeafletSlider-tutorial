@@ -1,12 +1,23 @@
 <html lang="en">
     <head>
         <!--jquery js-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- leaflet files -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+            <style>
+                #myMap {position: absolute; top: 0; bottom: 0; left: 0; right:0;}
+            </style>
     </head>
     <body>
+        <div id="myMap"<>/div>
+        <script>
+            var map1 = L.map ('myMap').setView([42.7316, -84.4728], 12);
+           
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+           }).addTo(map1);
+        </script>
 
     </body>
 </html>
