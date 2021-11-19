@@ -38,6 +38,13 @@
                         description: 'Frandor Deli closed permanently the week of May 18, 2020 due to the COVID-19 pandemic. According to the Lansing State Journal, Frandor Deli had been open for 38 years.',
                         time: '2020/05/18',
                         image: 'html/Frandor_deli.jpg',
+                        icon: {
+                            iconUrl: 'html/restauranticon.png',
+                            iconSize: [25, 41],
+                            iconAnchor: [3, 35],
+                            popupAnchor: [0, -41],
+                            className: 'dot',
+                        }
                     }
                 },
                 {
@@ -217,6 +224,7 @@
             };
             function onEachFeature (feature, layer) {
                var content = "<div style='clear: both'></div><div style='float: left; padding: 5px; margin-right: 10px'><img style='width: 200px;' src=" + feature.properties.image + " /></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
+                layer.setIcon(L.icon(feature.properties.icon));
                layer.bindPopup(content, {closeButton: true});
             };
             var group1 = L.geoJSON(dataset1, optionsObject);
