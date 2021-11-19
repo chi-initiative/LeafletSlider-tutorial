@@ -23,9 +23,14 @@
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
            }).addTo(map1);
-            var leafletIcon = L.icon ({
+            var CustomIcon = L.icon.extend({
+                options: {
                 iconUrl: 'https://img.icons8.com/color/48/000000/restaurant-.png',
-            })
+                    iconSize: [38, 95],
+                    iconAnchor: [22, 94],
+                    popupAnchor: [-3, -76]
+                }    
+            });
             var dataset1 = [
                 {
                     type: 'Feature',
@@ -36,7 +41,8 @@
                     properties: {
                         title: 'Frandor Deli',
                         description: '',
-                        time: '2020/5/17'
+                        time: '2020/5/18'
+
                     }
                 },
                 {
@@ -79,12 +85,13 @@
                     type: 'Feature',
                     geometry: {
                         type: 'Point',
-                        coordinates: [-84.448033799, 42.7260531]
+                        coordinates: [-84.6297554, 42.7425355]
                     },
                     properties: {
                         title: 'Grand Travers Pie Co.',
                         description: '',
                         time: '2020/11/17'
+
                     }
                 },
                 {
