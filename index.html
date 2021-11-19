@@ -322,7 +322,6 @@
             };
             function onEachFeature (feature, layer) {
                var content = "<div style='clear: both'></div><div style='float: left; padding: 5px; margin-right: 10px'><img style='width: 200px;' src=" + feature.properties.image + " /></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
-                layer.setIcon(L.icon(feature.properties.icon));
                layer.bindPopup(content, {closeButton: true});
             };
             var group1 = L.geoJSON(dataset1, optionsObject);
