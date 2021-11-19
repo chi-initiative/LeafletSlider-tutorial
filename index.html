@@ -25,9 +25,14 @@
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
            }).addTo(map1);
-            var leafletIcon = L.icon ({
-                iconUrl: 'https://img.icons8.com/color/48/000000/restaurant-.png',
-            })
+            var CustomIcon = L.icon.extend({
+                options: {
+                    iconUrl: 'html/restauranticon.png',
+                    iconSize:     [38, 95],
+                    iconAnchor:   [22, 94], 
+                    popupAnchor:  [-3, -76]
+                }
+            });
             var dataset1 = [
                 {
                     type: 'Feature',
