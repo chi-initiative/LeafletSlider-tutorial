@@ -16,7 +16,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
             <script src="js/SliderControl.js"></script>
             
-    </head>
+        </head>
     <body>
         <div id="myMap"<>/div>
         <script>
@@ -25,14 +25,9 @@
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
            }).addTo(map1);
-            var CustomIcon = L.icon.extend({
-                options: {
+            var leafletIcon = L.icon ({
                 iconUrl: 'https://img.icons8.com/color/48/000000/restaurant-.png',
-                    iconSize: [38, 95],
-                    iconAnchor: [22, 94],
-                    popupAnchor: [-3, -76]
-                }    
-            });
+            })
             var dataset1 = [
                 {
                     type: 'Feature',
@@ -43,7 +38,7 @@
                     properties: {
                         title: 'Frandor Deli',
                         description: '',
-                        time: '5/17/2020'
+                        time: '2020/5/18'
                     }
                 },
                 {
@@ -55,7 +50,7 @@
                     properties: {
                         title: 'Mijos Diner',
                         description: '',
-                        time: '3/23/2020'
+                        time: '2020/3/23'
                     }
                 },
                  {
@@ -67,7 +62,7 @@
                     properties: {
                         title: 'Fireside Grill',
                         description: '',
-                        time: '6/17/2020'
+                        time: '2020/6/17'
                     }
                 },
                 {
@@ -79,7 +74,7 @@
                     properties: {
                         title: 'The Brunch House',
                         description: '',
-                        time: '3/16/2020'
+                        time: '2020/3/16'
                     }
                 },
                 {
@@ -91,7 +86,7 @@
                     properties: {
                         title: 'Grand Travers Pie Co.',
                         description: '',
-                        time: '11/17/2020'
+                        time: '2020/11/17'
                     }
                 },
                 {
