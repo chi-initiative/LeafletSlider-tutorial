@@ -20,7 +20,7 @@ div.largeTextBox {
   left:0;
     border: 1px solid #cdcdcd;
     border-color: rgba(0,0,0,.15);
-    background-color: white;
+    background-color: #bbb377;
     font-size: 14px;
 }
 
@@ -31,12 +31,12 @@ div.titleBox {
     z-index: 9999;
     text-align: center;
   width: 300px;
-  height: 200px;
+  height: 100px;
   border: 3px solid #73AD21;;
     outline: none;
   left:50%;
     border: 1px solid #cdcdcd;
     border-color: rgba(0,0,0,.15);
-    background-color: white;
+    background-color: 777FBB;
     font-size: 30px;
 }
