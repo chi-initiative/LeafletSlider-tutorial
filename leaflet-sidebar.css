@@ -199,7 +199,7 @@
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
 
-a.one:link {
+a.one {
   background-color: #0074d9;
   color: white;
   padding: 1em 1.5em;
