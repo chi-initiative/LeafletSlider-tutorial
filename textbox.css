@@ -56,3 +56,8 @@ div.refrenceBox {
     border-color: rgba(0,0,0,.15);
     background-color: 777FBB;
     font-size: #bbb377;
+}
+  
+  ul.refrences {
+  list-style-type: circle;
+}
