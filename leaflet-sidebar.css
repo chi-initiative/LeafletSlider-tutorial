@@ -1,7 +1,7 @@
 .sidebar {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 200;
   width: 100%;
   overflow: hidden;
   z-index: 2000; }
@@ -35,8 +35,8 @@
       right: 10px; } }
 
 .sidebar-tabs {
-  top: 5;
-  bottom: 0;
+  top: 0;
+  bottom: 200;
   height: 100%;
   background-color: #fff; }
   .sidebar-left .sidebar-tabs {
@@ -77,12 +77,12 @@
         text-decoration: none;
         text-align: center; }
   .sidebar-tabs > ul + ul {
-    bottom: 0; }
+    bottom: 200; }
 
 .sidebar-content {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 200;
   background-color: rgba(255, 255, 255, 0.95);
   overflow-x: hidden;
   overflow-y: auto; }
