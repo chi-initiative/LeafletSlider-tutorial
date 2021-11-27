@@ -10,8 +10,8 @@ html, body {
 div.largeTextBox {
     padding: 0;
     position: fixed;
-  top: 90;
-    z-index: 1999;
+  top: 250;
+    z-index: 9999;
     text-align: center;
   width: 400px;
   height: 700px;
