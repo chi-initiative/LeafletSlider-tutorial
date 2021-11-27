@@ -199,13 +199,16 @@
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
 
-a.one {
-  background-color: #0074d9;
-  color: white;
-  padding: 1em 1.5em;
+a.one:link, a.one:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  position: fixed;
-  top: 30;
-  left: 50%; 
+  display: inline-block;
 }
+
+a.one:hover, a.one:active {
+  background-color: green;
+  color: white;
