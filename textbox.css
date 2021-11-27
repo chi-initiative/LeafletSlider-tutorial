@@ -40,3 +40,19 @@ div.titleBox {
     background-color: 777FBB;
     font-size: 30px;
 }
+
+div.refrenceBox {
+    padding: 0;
+    position: fixed;
+    bottom: 50;
+    z-index: 9999;
+    text-align: left;
+  width: 300px;
+  height: 500px;
+  border: 3px solid #73AD21;;
+    outline: none;
+  right:10%;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: 777FBB;
+    font-size: #bbb377;
