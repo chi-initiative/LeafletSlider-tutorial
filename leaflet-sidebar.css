@@ -199,7 +199,7 @@
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
 
-a:email {
+a1 {
   background-color: red;
   color: white;
   padding: 1em 1.5em;
