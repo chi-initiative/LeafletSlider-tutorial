@@ -7,7 +7,7 @@ html, body {
   height: 100%;
 }
 
-div.textBox {
+div.largeTextBox {
     padding: 0;
     position: fixed;
   top: 75;
