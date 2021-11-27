@@ -37,11 +37,12 @@ L.Control.SliderControl = L.Control.extend({
         var sliderContainer = L.DomUtil.create('div', '', this.sliderBoxContainer);
         sliderContainer.id = "leaflet-slider";
         sliderContainer.style.width = "200px";
+        sliderContainer.style.height = "200px";
 
         L.DomUtil.create('div', 'ui-slider-handle', sliderContainer);
         this.timestampContainer = L.DomUtil.create('div', 'slider', this.container);
         this.timestampContainer.id = "slider-timestamp";
-        this.timestampContainer.style.cssText = "width:200px; margin-top:3px; background-color:#FFFFFF; text-align:center; border-radius:5px;display:none;";
+        this.timestampContainer.style.cssText = "width:200px; margin-top:3px; background-color:#0074d9; text-align:center; border-radius:10px;display:none;";
 
 
         //Prevent map panning/zooming while using the slider
