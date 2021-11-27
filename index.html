@@ -87,8 +87,10 @@
 		    zoomControl: false}).setView([42.7318176, -84.55188700000001], 13);
            
             L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Sandy Burnely, Jeff Burnett, Meng Cai, & Katie Knowles, <a href="https://chi.anthropology.msu.edu/", class="your_class">CHI MSU 2021</a>');
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
            }).addTo(map1);
+		 map1.attributionControl.addAttribution('Sandy Burnely, Jeffrey Burnett, Meng Cai, & Katie Knowles, <a href="https://chi.anthropology.msu.edu/", class="your_class">CHI MSU 2021</a>');
+	  
            
             var dataset1 = [
                 {
