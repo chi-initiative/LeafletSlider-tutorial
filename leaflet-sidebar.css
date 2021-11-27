@@ -198,3 +198,7 @@
 @media (min-width: 768px) {
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
+
+a:link {
+  text-align: center;
+}
