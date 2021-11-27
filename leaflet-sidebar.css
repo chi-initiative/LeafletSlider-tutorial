@@ -199,6 +199,10 @@
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
 
-a:link {
-  text-align: center;
+a:email {
+  background-color: red;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
