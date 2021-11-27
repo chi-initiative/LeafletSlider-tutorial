@@ -41,7 +41,7 @@ div.titleBox {
     font-size: 30px;
 }
 
-div.refrenceBox {
+div.referencesBox {
     padding: 0;
     position: fixed;
     bottom: 50;
@@ -58,6 +58,6 @@ div.refrenceBox {
     font-size: #bbb377;
 }
   
-  ul.refrences {
+  ul.references {
   list-style-type: circle;
 }
