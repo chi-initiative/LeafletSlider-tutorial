@@ -207,5 +207,5 @@ a.one {
   text-transform: uppercase;
   position: fixed;
   top: 30;
-  right: 0; 
+  left: 50%; 
 }
