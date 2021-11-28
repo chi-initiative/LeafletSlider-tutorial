@@ -62,7 +62,4 @@ div.referencesBox {
   list-style-type: circle;
 }
 
-.leaflet-top,
-.leaflet-bottom {
-    pointer-events: all;
-}
+
