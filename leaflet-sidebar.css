@@ -79,8 +79,7 @@
         text-decoration: none;
         text-align: center; }
   .sidebar-tabs > ul + ul {
-    top: 10px;
-    bottom: 200px; }
+    top: 10px;}
 
 .sidebar-content {
   position: absolute;
