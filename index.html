@@ -431,10 +431,8 @@ map1.addControl(sliderControl1);
 // Initialize the slider
 sliderControl1.startSlider();
                 
-var sidebar = L.control.sidebar('sidebar').addTo(map1); 
-	var sidebar = L.control.sidebar('sidebar').addTo(map);
-
-sidebar.open('home');
+var sidebar = L.control.sidebar('sidebar').addTo(map1); 	
+	sidebar.open('home');
 
 var zoom_bar = new L.Control.ZoomBar({position: 'topright'}).addTo(map1);
        
