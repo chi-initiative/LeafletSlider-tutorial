@@ -27,7 +27,7 @@ div.largeTextBox {
 div.titleBox {
     padding: 0;
     position: fixed;
-  top: 50;
+    top: 50px;
     z-index: 9999;
     text-align: center;
   width: 300px;
