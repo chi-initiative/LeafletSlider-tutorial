@@ -69,6 +69,8 @@ L.Control.Sidebar = L.Control.extend(/** @lends L.Control.Sidebar.prototype */ {
         var i, child;
 
         this._map = map;
+        L.DomEvent.disableClickPropagation(sidebar);
+    return sidebar;
 
         for (i = this._tabitems.length - 1; i >= 0; i--) {
             child = this._tabitems[i];
