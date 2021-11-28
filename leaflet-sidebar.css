@@ -1,13 +1,13 @@
 .sidebar {
   position: absolute;
-  top: 0;
+  top: 10px;
   bottom: 200px;
   width: 100%;
   overflow: hidden;
   z-index: 9999; }
   .sidebar.collapsed {
     width: 40px;
-    top: 0;
+    top: 10px;
     bottom: 200px}
   @media (min-width: 768px) {
     .sidebar {
@@ -37,7 +37,7 @@
       right: 10px; } }
 
 .sidebar-tabs {
-  top: 0;
+  top: 10px;
   bottom: 200px;
   height: 100%;
   background-color: #fff; }
@@ -79,11 +79,12 @@
         text-decoration: none;
         text-align: center; }
   .sidebar-tabs > ul + ul {
-    bottom: 200; }
+    top: 10px;
+    bottom: 200px; }
 
 .sidebar-content {
   position: absolute;
-  top: 0;
+  top: 10px;
   bottom: 200px;
   background-color: rgba(255, 255, 255, 0.95);
   overflow-x: hidden;
@@ -101,6 +102,7 @@
   display: none;
   left: 0;
   right: 0;
+  top: 10px;
   bottom: 200px;
   box-sizing: border-box;
   padding: 10px 20px; }
@@ -129,7 +131,7 @@
 
 .sidebar-close {
   position: absolute;
-  top: 0;
+  top: 10px;
   bottom: 200px;
   width: 40px;
   height: 40px;
