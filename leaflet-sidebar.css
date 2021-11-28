@@ -83,7 +83,7 @@
 
 .sidebar-content {
   position: absolute;
-  top: 10px;
+  top: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.95);
   overflow-x: hidden;
@@ -124,7 +124,7 @@
   line-height: 40px;
   font-size: 14.4pt;
   color: #fff;
-  background-color: #0074d9; }
+  background-color: black; }
   .sidebar-right .sidebar-header {
     padding-left: 40px; }
 
