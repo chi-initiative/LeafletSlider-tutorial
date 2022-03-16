@@ -17,9 +17,9 @@ NOTE: This tutorial links to my fork of the Leaflet Time-Slider plugin because, 
 ---
 
 ## Set up html file for map
-Begin by setting up your html file with the basic structure.
+Begin by setting up your index.html file with the basic structure.
 
-```js
+```html
 <html lang="en">
     <head>
 
@@ -275,7 +275,7 @@ var sliderControl1 = L.control.sliderControl( {
 
 Finally, when you added the line `$.getJSON("data/popups.json", function(json) {`, it required putting the rest of the `<script>` contents below it inside of this function. So this means you'll need to go to the last line of the `<script>` to close the curl bracket, the parentheses, and add the final semicolon:
 
-```
+```js
     sliderControl1.startSlider();
 
 });
